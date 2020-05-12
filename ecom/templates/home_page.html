@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  
+<h1>Hello, world!</h1>
+
+    <div class="jumbotron">
+      {{title}}
+     
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>{{content}}</h1>
+      </div>
+    </div>
+    
+  </div>
+
+{% if  request.user.is_authenticated %}
+<div class="container">
+  <h1>premuim</h1>
+  {{premuim_content}}
+</div>
+{% endif %}
+  
+
+
+{% endblock content %}
+
+
+
+
